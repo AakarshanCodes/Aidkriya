@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "61725826475",
+    "project_id": "aidkriya-294dc",
+    "storage_bucket": "aidkriya-294dc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61725826475:android:828bb76c6a1d6fa722c6ee",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOhNZZOuI1ukgiqfdQ5tT_Xy4Lm4XEqLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
