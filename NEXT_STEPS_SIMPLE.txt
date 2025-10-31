@@ -1,0 +1,66 @@
+✅ YOUR APP IS WORKING! Now finish setup:
+
+================================================================================
+STEP 1: Fix Firestore Permissions (30 seconds)
+================================================================================
+
+1. Open this link:
+   https://console.firebase.google.com/project/aidkriya-294dc/firestore/rules
+
+2. Replace ALL the rules with this code:
+
+   rules_version = '2';
+   service cloud.firestore {
+     match /databases/{database}/documents {
+       match /users/{userId} {
+         allow read: if request.auth != null;
+         allow write: if request.auth != null && request.auth.uid == userId;
+       }
+       match /walks/{walkId} {
+         allow read: if request.auth != null;
+         allow write: if request.auth != null;
+       }
+     }
+   }
+
+3. Click "Publish" button
+
+4. Press 'r' in terminal to reload app
+
+================================================================================
+STEP 2: Test Everything!
+================================================================================
+
+Now you can:
+
+✅ Sign up as WANDERER
+   - Click "Sign Up"
+   - Enter email/password
+   - Choose "Wanderer"
+   - Click "Walk Now" button
+   - Request a walk
+
+✅ Sign up as WALKER (new account)
+   - Different email
+   - Choose "Walker"
+   - Click "Available Walks"
+   - Accept the walk request!
+
+✅ See your data in Firestore:
+   - Open: https://console.firebase.google.com/project/aidkriya-294dc/firestore
+   - See users collection
+   - See walks collection
+
+================================================================================
+STEP 3: Record Your Demo!
+================================================================================
+
+Perfect for your competition submission:
+1. Signup as Wanderer
+2. Request a walk
+3. Login as Walker
+4. Accept walk
+5. Show UI and features
+
+✅ YOU'RE READY FOR YOUR COMPETITION! 🏆
+

@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users can read/write their own user profile
+    match /users/{userId} {
+      allow read, update, delete: if request.auth.uid == userId;
+      allow create: if request.auth.uid != null;
+    }
+
+    // Any logged-in user can read the 'walks' collection
+    // This is what will fix your error
+    match /walks/{walkId} {
+      allow read: if request.auth.uid != null;
+
+      // Only the wanderer who created the walk can update/delete it
+      // A walker can update it (e.g., to accept it)
+      allow create: if request.auth.uid == request.resource.data.wandererId;
+      allow update: if request.auth.uid != null; // Allow walkers to accept
+      allow delete: if request.auth.uid == resource.data.wandererId;
+    }
+  }
+}

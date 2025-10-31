@@ -1,0 +1,26 @@
+========================================
+TO RUN YOUR APP - USE THESE COMMANDS:
+========================================
+
+1. First, navigate to the Flutter project folder:
+   
+   cd flutter_application_1
+
+2. Then run the app:
+   
+   flutter run -d chrome
+
+OR, run all in one line:
+
+   cd flutter_application_1 && flutter run -d chrome
+
+========================================
+WHERE YOU ARE NOW:
+
+You're in: C:\Users\aakar\AIDkriya
+You need to be in: C:\Users\aakar\AIDkriya\flutter_application_1
+
+The pubspec.yaml file is INSIDE the flutter_application_1 folder!
+
+========================================
+

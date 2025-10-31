@@ -19,6 +19,12 @@
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
+  
+  <!-- Google Sign-In Client ID -->
+  <!-- Replace this with your OAuth client ID from Firebase Console -->
+  <!-- Get it from: Firebase Console > Project Settings > Your apps > Web app > OAuth client ID -->
+  <!-- Example: <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com" /> -->
+  <meta name="google-signin-client_id" content="">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -31,6 +37,14 @@
 
   <title>flutter_application_1</title>
   <link rel="manifest" href="manifest.json">
+
+  <!-- 
+    *********************************************************************
+    THIS IS THE FIX:
+    Add your Google Maps API key here. This will fix the red screen error.
+    *********************************************************************
+  -->
+  <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyABOQz5h4zZgMHLGuJTRIiX6hITE3fg2TM"></script>
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
